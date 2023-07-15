@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
   def index
-    @users = User.all
+    @users = User.includes(:roles).page params[:page]
   end
 end

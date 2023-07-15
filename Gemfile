@@ -72,3 +72,7 @@ group :test do
 end
 
 gem "cssbundling-rails", "~> 1.2"
+
+gem "kaminari", "~> 1.2"
+
+gem "scenic", "~> 1.7"
