@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Role.insert_all([{ :label => 'admin' }, { :label => 'manager' }, { :label => 'register' }, { :label => 'user' }], :unique_by => :label)

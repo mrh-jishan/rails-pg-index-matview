@@ -13,20 +13,25 @@
 
   <div>
     <%= form.label :first_name, style: "display: block" %>
-    <%= form.text_field :first_name %>
+    <%= form.text_field :first_name, class: 'form-control' %>
   </div>
 
   <div>
     <%= form.label :last_name, style: "display: block" %>
-    <%= form.text_field :last_name %>
+    <%= form.text_field :last_name, class: 'form-control' %>
   </div>
 
   <div>
     <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email, class: 'form-control' %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.label :roles, style: "display: block" %>
+    <%= form.select :role_ids, options_for_select(Role.pluck(:label, :id)), { :prompt => "Please select", :include_hidden => false }, { multiple: true, class: 'form-control' } %>
+  </div>
+
+  <div class="mt-2">
+    <%= form.submit class: 'btn btn-primary' %>
   </div>
 <% end %>
